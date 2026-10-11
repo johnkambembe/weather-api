@@ -5,13 +5,14 @@ import router from "./src/routes/weatherRoutes.js";
 import client from "./src/config/redis.js";
 
 
-
+//express app
 const app = express();
 
 app.use("/weather/", router);
 
 const PORT = process.env.PORT || 5000;
 
+//connect to redis
 await client.connect();
 
 console.log("Redis connected");
