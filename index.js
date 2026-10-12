@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from "dotenv/config";
+import dotenv from "dotenv/config"; //dotenv and config
 
 import router from "./src/routes/weatherRoutes.js";
 import client from "./src/config/redis.js";
@@ -10,7 +10,7 @@ const app = express();
 
 app.use("/weather/", router);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; //Localhost
 
 //connect to redis
 await client.connect();
